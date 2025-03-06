@@ -125,46 +125,6 @@ h6,
     }
 }
 
-/* .carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(49, 100, 181, 0.85);
-    z-index: 1;
-}
-
-@media (max-width: 576px) {
-    .carousel-caption h5 {
-        font-size: 14px;
-        font-weight: 500 !important;
-    }
-
-    .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 600 !important;
-    }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-}
-
-@media (min-width: 991.98px) {
-    .banner {
-        position: relative;
-        margin-top: -90px;
-        z-index: 1;
-    }
-} */
-
 /* Carousel Indicators */
 .carousel-indicators {
     position: absolute;
@@ -181,8 +141,8 @@ h6,
 }
 
 .carousel-indicators button {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     /* border-radius: 50%; */
     background-color: rgba(89, 15, 15, 0.5); /* Inactive dot color */
     border: none;
@@ -242,7 +202,7 @@ h6,
     top: 50%;
     transform: translateY(-50%);
     width: 10%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .carousel-control-prev {
@@ -252,14 +212,40 @@ h6,
 .carousel-control-next {
     right: 0;
 }
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px;
+    width: 2rem; /* Smaller size for small screens */
+    height: 2rem; /* Smaller size for small screens */
+    background-color: #06A3DA; /* Semi-transparent background */
+    border-radius: 10%; /* Make it circular */
+    padding: 20px; /* Adjust padding for better spacing */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for better interactivity */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #F57E57;/*  background on hover */
+}
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2.5rem; /* Original size for desktop */
+        height: 2.5rem; /* Original size for desktop */
+        padding: 18px; /* Slightly more padding for desktop */
+    }
+}
+
+/* Adjust for very small screens (460px and smaller) */
+@media (max-width: 460px) {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2rem; /* Smaller size for very small screens */
+        height: 2rem; /* Smaller size for very small screens */
+        padding: 10px; /* Less padding for very small screens */
+    }
 }
 
 /* Responsive Adjustments */
